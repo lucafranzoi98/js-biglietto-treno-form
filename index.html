@@ -8,16 +8,38 @@
 <body>
    
    <div>
-      <label>Inserisci la distanza:</label>
-      <input type="text" name="userDistance" id="userDistance">
+      <h1>Calcola il prezzo del tuo biglietto</h1>
+
+      <form id="form">
+         <div>
+            <div>Inserisci nome e cognome:</div>
+            <input type="text" name="userName" id="userName">
+         </div>
+
+         <div>
+            <div>Inserisci la distanza:</div>
+            <input type="text" name="userDistance" id="userDistance">
+         </div>
+         
+         <div>
+            <div>Inserisci l'età:</div>
+            <input list="userAge" id="selectAge">
+            <datalist id="userAge">
+               <option value="Under 18"></option>
+               <option value="Adulto"></option>
+               <option value="Over 65"></option>
+            </datalist>
+         </div>
+
+         
+      
+         <button id="calc">Calcola</button>
+         <input type="reset" value="Annulla" />
+      </form>
    </div>
    
-   <div>
-      <label>Inserisci l'età:</label>
-      <input type="text" name="userAge" id="userAge">
-   </div>
 
-   <button>Calcola</button>
+   <p>Il prezzo finale è di: <span id="userPrice"></span>&euro;</p>
 
    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
