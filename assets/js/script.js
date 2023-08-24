@@ -18,7 +18,15 @@ calcElement.addEventListener("click", function(e){
 
    price = price.toFixed(2);
 
-   document.getElementById("userPrice").innerHTML = price;
+   const ticketName = document.getElementById("userName").value;
+   const ticketSurname = document.getElementById("userSurname").value;
+
+   document.getElementById("ticketName").innerHTML = ticketName + " " + ticketSurname;
+
+   const ticketAge = document.getElementById("selectAge").value;
+   document.getElementById("ticketAge").innerHTML = ticketAge;
+
+   document.getElementById("ticketPrice").innerHTML = price + " Euro";
    e.preventDefault();
 }
 );
